@@ -41,6 +41,10 @@
       background-color: white;
       margin: 15px 20px;
       height: 200px;
+      background-size: cover;
+
+      /* photo-frame 밑에 소속된 선택자들이 photo-frame 기준에서 어디에 위치할 것인지  */
+      position: relative;
     }
 
     .footer {
@@ -64,6 +68,42 @@
       font-size: 15px;
       font-weight: 500;
     }
+
+    #image1 {
+      background-image: url(./img1.png);
+    }
+
+    #image2 {
+      background-image: url(./img2.png);
+    }
+
+    #image3 {
+      background-image: url(./img3.png);
+    }
+
+    #image4 {
+      background-image: url(./img4.png);
+    }
+
+    .photo_description {
+      color: white;
+      background-color: black;
+
+      /* 가로 너비는 내부 콘텐츠에 딱 맞게! */
+      width: fit-content;
+      padding: 0 20px;
+      margin-bottom: 10px;
+
+      /* 경계선 */
+      border-radius: 10px;
+      position: absolute;
+      bottom: 0;
+
+      transform: translate(-50%);
+      left: 50%;
+    }
+
+    
   </style>
 </head>
 <body>
@@ -71,22 +111,22 @@
     <div class="photos">
       <div id="image1" class="photo-frame">
         <span id="desc1" class="photo_description">
-          첫 번째 이미지 설명
+          르탄이 첫번째 포즈
         </span>
       </div>
       <div id="image2" class="photo-frame">
         <span id="desc2" class="photo_description">
-          두 번째 이미지 설명
+          르탄이 두번째 포즈
         </span>
       </div>
       <div id="image3" class="photo-frame">
         <span id="desc3" class="photo_description">
-          세 번째 이미지 설명
+          르탄이 세번째 포즈
         </span>
       </div>
       <div id="image4" class="photo-frame">
         <span id="desc4" class="photo_description">
-          네 번째 이미지 설명
+          르탄이 네번째 포즈
         </span>
       </div>
     </div>
@@ -95,7 +135,5 @@
       <p class="f-data">2024.06.29</p>
     </div>
   </div>
-
-
 </body>
 </html>
